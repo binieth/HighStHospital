@@ -1,5 +1,6 @@
 # HighStHospital
 boot camp weekend project
+
 The Scenario
 High St. Hospital is an organizational mess. 
 They have unkempt files of employee information scattered throughout manilla folders, computer data files, and old tin filing cabinets.
