@@ -1,4 +1,4 @@
-package highsthospital;
+package hospitalEmployee;
 
 public class Nurse extends Employee {
 
