@@ -10,6 +10,6 @@ public class Patient extends Hospital {
 	
 	private final int BLOOD_LEVEL = 20;
 	private final int HEALTH_LEVEL = 10;
-String name;
+
 
 }

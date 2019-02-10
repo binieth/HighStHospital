@@ -1,6 +1,13 @@
 package highsthospital;
 
-public class Employee {
+public class Employee extends Hospital { 
+	public Employee(String employee, String patient) {
+		super(employee, patient);
+
+
+	}
+
+{
 	String doctor;
 	String nurse;
 	String surgeon;
@@ -14,6 +21,7 @@ public class Employee {
 		this.receptionist = receptionist;
 		this.janitor = janitor;
 	}
+}
 	
 
 }

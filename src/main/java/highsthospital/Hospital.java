@@ -11,7 +11,8 @@ public class Hospital {
 		this.patients = patients;
 	}
 	
-	public void 
+	// create a method
+	public static void 
 	
 
 }
