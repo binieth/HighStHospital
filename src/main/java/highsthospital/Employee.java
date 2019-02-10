@@ -1,27 +1,43 @@
 package highsthospital;
 
-public class Employee extends Hospital { 
-	public Employee(String employee, String patient) {
-		super(employee, patient);
+public class Employee {
 
+	// creating variables or instance field.
+	private String name;
+	private int idNumber;
+	private String speciality;
+	private boolean hospitalEmployee;
 
+	// creating a constructor
+
+	public Employee(String name, int idNumber, String speciality, boolean hospitalEmployee) {
+
+		this.name = name;
+		this.idNumber = idNumber;
+		this.speciality = speciality;
+		this.hospitalEmployee =true;
 	}
-
-{
-	String doctor;
-	String nurse;
-	String surgeon;
-	String receptionist;
-	String janitor;
-	public Employee(String doctor, String nurse, String surgeon, String receptionist, String janitor) {
-		
-		this.doctor = doctor;
-		this.nurse = nurse;
-		this.surgeon = surgeon;
-		this.receptionist = receptionist;
-		this.janitor = janitor;
-	}
-}
 	
+	// creating a method:
 
+	public String getName() {
+		return name;
+	}
+
+	
+	public int getIdNumber() {
+		return idNumber;
+	}
+
+	
+	public String getSpeciality() {
+		return speciality;
+	}
+
+	public boolean isHospitalEmployee() {
+		return hospitalEmployee;
+	}
+
+	
+		
 }

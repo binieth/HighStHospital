@@ -1,5 +1,5 @@
 package highsthospital;
 
-public class Doctor {
+public class Doctor extends Employee {
 
 }

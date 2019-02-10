@@ -1,18 +1,38 @@
 package highsthospital;
 
+import java.util.HashMap;
+
 public class Hospital {
 	
-	private String employees;
-	private String patients;
+	private HashMap<String, Employee> employees = new HashMap<String, Employee>(); // <key, value>
+
+	public void addEmployee(Employee hospitalEmployee) {
+		employees.put(hospitalEmployee.getEmployeeName(), hospitalEmployee);
+
+	}
 	
-	public Hospital(String employees, String patients) {
+	private String employee;
+	private String patient;
 	
-		this.employees = employees;
-		this.patients = patients;
+	public Hospital(String employee, String patient) {
+	
+		this.employee = employee;
+		this.patient = patient;
 	}
 	
 	// create a method
-	public static void 
+	public void hospitalEmployee () {
+		
+	}
+	
+	public void yearlySalery () {
+		
+		
+	}
+	
+	public void hospitalPatient () {
+		
+	}
 	
 
 }
