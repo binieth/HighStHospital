@@ -6,7 +6,11 @@ public abstract class Janitor extends Employee {
 	
 	public Janitor(String employeeName, int employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
-		this.mainTaskStatus = false;
+		//this.mainTaskStatus = true;
+	}
+
+	public void setMainTaskStatus(boolean mainTaskStatus) {
+		this.mainTaskStatus = mainTaskStatus;
 	}
 
 	public boolean getMainTaskStatus() {

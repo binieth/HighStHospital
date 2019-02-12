@@ -6,7 +6,7 @@ public class RealJanitor extends Janitor implements SweepingHospital {
 
 	public RealJanitor(String employeeName, int employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
-		this.mainTaskStatus = false;
+		this.mainTaskStatus = true;
 	}
 	
 	public boolean getMainTaskStatus() {

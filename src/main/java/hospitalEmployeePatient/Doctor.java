@@ -1,5 +1,5 @@
 /*
- * 
+ * Doctors 
  */
 
 package hospitalEmployeePatient;
@@ -10,6 +10,7 @@ public class Doctor extends Employee implements DrawBlood, CareForPatient {
 	
 	public Doctor(String employeeName, int employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
+		
 		//this.specialty = specialty;
 	}
 	

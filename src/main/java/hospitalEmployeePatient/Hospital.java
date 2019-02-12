@@ -17,9 +17,9 @@ public class Hospital {
 	public HashMap<String, Employee> getEmployees() {
 		return employees;
 	}
-//		
-//		public Hospital() {	
-//		}
+		
+		public Hospital() {	
+		}
 
 	public HashMap<String, Patient> getPatients() {
 		return patients;
@@ -34,12 +34,12 @@ public class Hospital {
 	}
 
 	// in order to determine how clean the hospital is i have to have a scale:
-	public void getHospitalCleaner(int x) {
-		preferedcleanliness += x;
+	public void getHospitalCleaner(int i) {
+		preferedcleanliness += i;
 	}
 
-	public void getHospitalDirtier(int x) {
-		preferedcleanliness -= x;
+	public void getHospitalDirtier(int i) {
+		preferedcleanliness -= i;
 	}
 
 	// need to determine the employee number and patient number as follows:
@@ -75,8 +75,8 @@ public class Hospital {
 		employees.remove(employee.getPatientName(), employee);
 	}
 
-	public void addPatient(Patient patient) {
-		patients.put(patient.getPatientName(), patient);
+	public void addPatient(Patient patientName) {
+		patients.put(((Patient) patientName).getPatientName(), patientName);
 	}
 
 	public void listAllSalaries() {
@@ -93,6 +93,11 @@ public class Hospital {
 	public void tickAllPatients() {
 		
 		
+	}
+
+	public Patient findPatient(Object patientName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

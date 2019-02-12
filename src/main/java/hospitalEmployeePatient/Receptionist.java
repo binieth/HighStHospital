@@ -36,7 +36,7 @@ public class Receptionist extends Employee {
 
 	@Override
 	protected Object getPatientName() {
-		// TODO Auto-generated method stub
+		 
 		return null;
 	}
 

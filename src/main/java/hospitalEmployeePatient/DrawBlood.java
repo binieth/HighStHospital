@@ -7,7 +7,7 @@ package hospitalEmployeePatient;
 
 public interface DrawBlood {
 
-	public void drawBlood(Patient patient);
+	public void drawBlood(Patient bloodLevel);
 
 }
 
