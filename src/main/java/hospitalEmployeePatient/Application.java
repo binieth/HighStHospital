@@ -2,11 +2,9 @@ package hospitalEmployeePatient;
 
 import java.util.Scanner;
 
-
-
 public class Application {
-	
-	//public static Scanner userInput = new Scanner(System.in);
+
+	// public static Scanner userInput = new Scanner(System.in);
 	public static Hospital hospitalEmployeePatient = new Hospital();
 
 	private static String patientName;
@@ -51,7 +49,7 @@ public class Application {
 
 			hospital.tick();
 			hospital.tickAllPatients();
-			
+
 			s("*******************************");
 			s("* WELCOME TO HIGH ST HOSPITAL *");
 			s("*******************************");
@@ -76,32 +74,32 @@ public class Application {
 				while (employeeStats) {
 
 					s("What Information would you like to see?");
-					s("1. Names, Employee ID #, or Job Position");
-					s("2. Employee Annual Salary");
-					s("3. Return to Main Menu");
+					s("1 Names, Employee ID #, or Job Position");
+					s("2 Employee Annual Salary");
+					s("3 Return to Main Menu");
 					s("*****************************************");
 
-					String employeeStatChoice = input.nextLine();
+					String subMenuChoice = input.nextLine();
 
-					if (employeeStatChoice.equals("1")) {
+					if (subMenuChoice.equals("1")) {
 						for (Employee employee : hospital.getEmployees().values()) {
 							s(employee.toString());
 						}
-						s("***************************************");
-					} else if (employeeStatChoice.equals("2")) {
+						s("*********************************************");
+					} else if (subMenuChoice.equals("2")) {
 						hospital.listAllSalaries();
-						s("***************************************");
-					} else if (employeeStatChoice.equals("3")) {
+						s("***********************");
+					} else if (subMenuChoice.equals("3")) {
 						employeeStats = false;
 					}
-					break;
+
 				}
 				break;
 
 			case "2":
 
-				
 				s("Patient Stats:");
+
 				for (Patient patient : hospital.getPatients().values()) {
 					System.out.println(patient.toString());
 				}
@@ -110,9 +108,9 @@ public class Application {
 
 			case "3":
 
-				boolean careForAllMenu = true;
+				boolean careForAllPatientMenu = true;
 
-				while (careForAllMenu) {
+				while (careForAllPatientMenu) {
 
 					s("What would you like to do?");
 					s(" 1 Care for all patients");
@@ -140,22 +138,23 @@ public class Application {
 							nurse.drawBlood(patient);
 							System.out.println(patient.toString());
 						}
-						s("**********************************************");
+						s("*********************************************");
 						break;
 
 					case "3":
-						careForAllMenu = false;
+						careForAllPatientMenu = false;
 						break;
 					}
+					break;
 				}
 				break;
 
 			case "4":
 
-				boolean repeatIndividualCare = true;
+				boolean careForIndividual = true;
 
-				while (repeatIndividualCare) {
-					
+				while (careForIndividual) {
+
 					hospital.tickAllPatients();
 					hospital.tick();
 
@@ -209,7 +208,7 @@ public class Application {
 						break;
 
 					case "3":
-						repeatIndividualCare = false;
+						careForIndividual = false;
 						break;
 					}
 				}
@@ -217,8 +216,8 @@ public class Application {
 
 			case "5":
 
-				boolean repeatJanitorMenu = true;
-				while (repeatJanitorMenu) {
+				boolean janitorMenu = true;
+				while (janitorMenu) {
 
 					s("What kind of Janitor would you like to have sweep the hospital?");
 					s("1 Real Person Janitor");
@@ -254,7 +253,7 @@ public class Application {
 						break;
 
 					case "4":
-						repeatJanitorMenu = false;
+						janitorMenu = false;
 						break;
 					}
 				}
@@ -272,7 +271,6 @@ public class Application {
 			}
 		}
 	}
-
 
 	private static void s(String s) {
 		System.out.println(s);

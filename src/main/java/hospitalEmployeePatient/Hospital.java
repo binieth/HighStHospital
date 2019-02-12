@@ -17,13 +17,13 @@ public class Hospital {
 	public HashMap<String, Employee> getEmployees() {
 		return employees;
 	}
-		
-		public Hospital() {	
-		}
-
 	public HashMap<String, Patient> getPatients() {
 		return patients;
 	}
+		
+	//public Hospital() {	
+//		}
+
 
 	// Generating a Variable to Set a perfect cleanliness Status for the Hospital
 
@@ -95,9 +95,9 @@ public class Hospital {
 		
 	}
 
-	public Patient findPatient(Object patientName) {
+	public Patient findPatient(Patient patientName) {
 		
-		return null;
+		return patientName;
 	}
 
 }
