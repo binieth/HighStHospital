@@ -4,8 +4,10 @@ public class RealJanitor extends Janitor implements SweepingHospital {
 	
 	private boolean mainTaskStatus;
 
-	public RealJanitor(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public RealJanitor(String employeeName, double employeeIdNumber, String employmentPosition) {
+		
 		super(employeeName, employeeIdNumber, employmentPosition);
+		
 		this.mainTaskStatus = true;
 	}
 	
@@ -22,10 +24,10 @@ public class RealJanitor extends Janitor implements SweepingHospital {
 		return 40000;
 	}
 
-	@Override
-	public String toString() {
-		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber() + " " + mainTaskStatus;
-	}
+//	@Override
+//	public String toString() {
+//		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber() + " " + mainTaskStatus;
+//	}
 
 	@Override
 	public void sweepHospital(Hospital hospital) {

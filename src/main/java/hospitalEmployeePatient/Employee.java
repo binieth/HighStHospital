@@ -3,7 +3,7 @@ package hospitalEmployeePatient;
 public abstract class Employee {
 	
 	public abstract int calculatePay();
-	public abstract String toString();
+
 	
 
 	// creating variables or instance field.
@@ -12,10 +12,10 @@ public abstract class Employee {
 	private String employmentPosition;
 
 	// generating constructor:
-	public Employee(String employeeName, double employeeIdNumber2, String employmentPosition) {
+	public Employee(String employeeName, double employeeIdNumber, String employmentPosition) {
 
 		this.employeeName = employeeName;
-		this.employeeIdNumber = employeeIdNumber2;
+		this.employeeIdNumber = employeeIdNumber;
 		this.employmentPosition = employmentPosition;
 	}
 
@@ -34,6 +34,9 @@ public abstract class Employee {
 		return employmentPosition;
 	}
 	protected abstract Object getPatientName();
-
+@Override
+public String toString() {
+	return employeeName + " ," + employeeIdNumber + " ," + employmentPosition;
+}
 
 }

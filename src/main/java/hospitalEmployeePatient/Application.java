@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Application {
 
-	// public static Scanner userInput = new Scanner(System.in);
-	public static Hospital hospitalEmployeePatient = new Hospital();
+ public static Scanner userInput = new Scanner(System.in);
+	//public static Hospital hospitalEmployeePatient = new Hospital();
 
 	private static String patientName;
 	private static String individualCare;
@@ -22,12 +22,12 @@ public class Application {
 		VampireJanitor vampireJanitor = new VampireJanitor("The_Scary_Person", 005, "Vampire Janitor");
 		RealJanitor realJanitor = new RealJanitor("Lucy", 006, "Janitor");
 
-		hospitalEmployeePatient.addEmployee((Employee) doctor);
-		hospitalEmployeePatient.addEmployee((Employee) surgeon);
-		hospitalEmployeePatient.addEmployee((Employee) nurse);
-		hospitalEmployeePatient.addEmployee((Employee) receptionist);
-		hospitalEmployeePatient.addEmployee((Employee) vampireJanitor);
-		hospitalEmployeePatient.addEmployee((Employee) realJanitor);
+		hospital.addEmployee((Employee) doctor);
+		hospital.addEmployee((Employee) surgeon);
+		hospital.addEmployee((Employee) nurse);
+		hospital.addEmployee((Employee) receptionist);
+		hospital.addEmployee((Employee) vampireJanitor);
+		hospital.addEmployee((Employee) realJanitor);
 
 		Patient patient1 = new Patient("Liya", 20, 10);
 		Patient patient2 = new Patient("Afro", 20, 10);
@@ -35,11 +35,11 @@ public class Application {
 		Patient patient4 = new Patient("Marley", 20, 10);
 		Patient patient5 = new Patient("Jordan", 20, 10);
 
-		hospitalEmployeePatient.addPatient(patient1);
-		hospitalEmployeePatient.addPatient(patient2);
-		hospitalEmployeePatient.addPatient(patient3);
-		hospitalEmployeePatient.addPatient(patient4);
-		hospitalEmployeePatient.addPatient(patient5);
+		hospital.addPatient(patient1);
+		hospital.addPatient(patient2);
+		hospital.addPatient(patient3);
+		hospital.addPatient(patient4);
+		hospital.addPatient(patient5);
 		
 		boolean mainMenu = true;
 
@@ -81,7 +81,7 @@ public class Application {
 
 					if (subMenuChoice.equals("1")) {
 						for (Employee employee : hospital.getEmployees().values()) {
-							s(employee.toString());
+							s(((Employee)employee).toString());
 						}
 						s("*********************************************");
 					} else if (subMenuChoice.equals("2")) {

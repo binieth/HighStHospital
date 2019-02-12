@@ -68,11 +68,11 @@ public class Hospital {
 	}
 
 	public void addEmployee(Employee employee) {
-		employees.put((String) employee.getPatientName(), employee);
+		employees.put((String) employee.getEmployeeName(), employee);
 	}
 
 	public void removeEmployee(Employee employee) {
-		employees.remove(employee.getPatientName(), employee);
+		employees.remove(employee.getEmployeeName());
 	}
 
 	public void addPatient(Patient patientName) {
@@ -81,7 +81,7 @@ public class Hospital {
 
 	public void listAllSalaries() {
 		for (Employee employee : employees.values()) {
-			System.out.println(employee.getPatientName() + " " + "$" + employee.calculatePay());
+			System.out.println(employee.getEmployeeName() + " " + "$" + employee.calculatePay());
 		}
 	}
 

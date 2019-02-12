@@ -20,10 +20,10 @@ public class Doctor extends Employee implements CareForPatient, DrawBlood {
 		return specialty;
 	}
 	
-	public String toString() {
-		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber() + " " + specialty;
-	}
-	
+//	public String toString() {
+//		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber() + " " + specialty;
+//	}
+//	
 	@Override
 	public void careForPatient(Patient patient) {
 		patient.increaseHealth(2);	

@@ -2,7 +2,7 @@ package hospitalEmployeePatient;
 
 public class Nurse extends Employee implements DrawBlood, CareForPatient {
 
-	public Nurse(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public Nurse(String employeeName, double employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
 	}
 	
@@ -23,10 +23,10 @@ public class Nurse extends Employee implements DrawBlood, CareForPatient {
 		patient.lowerBloodLevel(1);
 	}
 
-	@Override
-	public String toString() {
-		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber();
-	}
+//	@Override
+//	public String toString() {
+//		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber();
+//	}
 
 
 	@Override

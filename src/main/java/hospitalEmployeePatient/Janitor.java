@@ -4,7 +4,7 @@ public abstract class Janitor extends Employee {
 	
 	private boolean mainTaskStatus;
 	
-	public Janitor(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public Janitor(String employeeName, double employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
 		//this.mainTaskStatus = true;
 	}

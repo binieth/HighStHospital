@@ -10,7 +10,7 @@ public class Receptionist extends Employee {
 
 	private Boolean mainTaskStatus;
 
-	public Receptionist(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public Receptionist(String employeeName, double employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
 		this.mainTaskStatus = true;
 	}
@@ -28,11 +28,11 @@ public class Receptionist extends Employee {
 		return 45000;
 	}
 
-	@Override
-	public String toString() {
-		return getEmploymentPosition() + " " + getEmployeeIdNumber() + " " + getEmployeeIdNumber() + " "
-				+ mainTaskStatus;
-	}
+//	@Override
+//	public String toString() {
+//		return getEmploymentPosition() + " " + getEmployeeIdNumber() + " " + getEmployeeIdNumber() + " "
+//				+ mainTaskStatus;
+//	}
 
 	@Override
 	protected Object getPatientName() {

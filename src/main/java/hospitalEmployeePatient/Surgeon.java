@@ -5,7 +5,7 @@ public class Surgeon extends Doctor implements DrawBlood, CareForPatient {
 	private boolean mainTaskStatus;
 	private String specialty;
 	
-	public Surgeon(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public Surgeon(String employeeName, double employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
 		this.mainTaskStatus = false;
 		this.specialty = "surgeon";
@@ -37,9 +37,9 @@ public class Surgeon extends Doctor implements DrawBlood, CareForPatient {
 		patient.lowerBloodLevel(4);
 	}
 	
-	@Override
-	public String toString() {
-		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber() + " " + getMainTaskStatus();	
-	}
+//	@Override
+//	public String toString() {
+//		return getEmploymentPosition() + " " + getPatientName() + " " + getEmployeeIdNumber() + " " + getMainTaskStatus();	
+//	}
 }
 	
