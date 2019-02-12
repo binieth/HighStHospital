@@ -3,17 +3,18 @@ package hospitalEmployeePatient;
 import java.util.Scanner;
 
 
+
 public class Application {
 	
-	public static Scanner userInput = new Scanner(System.in);
+	//public static Scanner userInput = new Scanner(System.in);
 	public static Hospital hospitalEmployeePatient = new Hospital();
 
 	private static String patientName;
 	private static String individualCare;
+	static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);
 		Hospital hospital = new Hospital();
 
 		Doctor doctor = new Doctor("Elshaday", 001, "Doctor");
@@ -44,9 +45,9 @@ public class Application {
 		System.out.println("Welcome to High St Hospital");
 		System.out.println("---------------------------");
 
-		boolean repeatMainMenu = true;
+		boolean mainMenu = true;
 
-		while (repeatMainMenu) {
+		while (mainMenu) {
 
 			hospital.tick();
 			hospital.tickAllPatients();
@@ -64,15 +65,15 @@ public class Application {
 			s("6. Exit");
 			s("**************************************");
 
-			int mainMenuChoice = input.nextInt();
+			String mainMenuChoice = input.nextLine();
 
 			switch (mainMenuChoice) {
 
-			case 1:
+			case "1":
 
-				boolean repeatEmployeeStats = true;
+				boolean employeeStats = true;
 
-				while (repeatEmployeeStats) {
+				while (employeeStats) {
 
 					s("What Information would you like to see?");
 					s("1. Names, Employee ID #, or Job Position");
@@ -91,12 +92,13 @@ public class Application {
 						hospital.listAllSalaries();
 						s("***************************************");
 					} else if (employeeStatChoice.equals("3")) {
-						repeatEmployeeStats = false;
+						employeeStats = false;
 					}
+					break;
 				}
 				break;
 
-			case 2:
+			case "2":
 
 				
 				s("Patient Stats:");
@@ -106,11 +108,11 @@ public class Application {
 				s("***************************************");
 				break;
 
-			case 3:
+			case "3":
 
-				boolean repeatCareAllMenu = true;
+				boolean careForAllMenu = true;
 
-				while (repeatCareAllMenu) {
+				while (careForAllMenu) {
 
 					s("What would you like to do?");
 					s(" 1 Care for all patients");
@@ -142,13 +144,13 @@ public class Application {
 						break;
 
 					case "3":
-						repeatCareAllMenu = false;
+						careForAllMenu = false;
 						break;
 					}
 				}
 				break;
 
-			case 4:
+			case "4":
 
 				boolean repeatIndividualCare = true;
 
@@ -213,7 +215,7 @@ public class Application {
 				}
 				break;
 
-			case 5:
+			case "5":
 
 				boolean repeatJanitorMenu = true;
 				while (repeatJanitorMenu) {
@@ -258,9 +260,9 @@ public class Application {
 				}
 				break;
 
-			case 6:
+			case "6":
 
-				repeatMainMenu = false;
+				mainMenu = false;
 				s("Thank You For Your Visit!");
 				break;
 

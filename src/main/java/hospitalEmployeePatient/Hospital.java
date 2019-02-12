@@ -96,7 +96,7 @@ public class Hospital {
 	}
 
 	public Patient findPatient(Object patientName) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

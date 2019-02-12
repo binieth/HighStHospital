@@ -8,7 +8,7 @@ public class Doctor extends Employee implements DrawBlood, CareForPatient {
 	
 	private String specialty;
 	
-	public Doctor(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public Doctor(String employeeName, double employeeIdNumber, String employmentPosition) {
 		super(employeeName, employeeIdNumber, employmentPosition);
 		
 		//this.specialty = specialty;

@@ -8,14 +8,14 @@ public abstract class Employee {
 
 	// creating variables or instance field.
 	private String employeeName;
-	private int employeeIdNumber;
+	private double employeeIdNumber;
 	private String employmentPosition;
 
 	// generating constructor:
-	public Employee(String employeeName, int employeeIdNumber, String employmentPosition) {
+	public Employee(String employeeName, double employeeIdNumber2, String employmentPosition) {
 
 		this.employeeName = employeeName;
-		this.employeeIdNumber = employeeIdNumber;
+		this.employeeIdNumber = employeeIdNumber2;
 		this.employmentPosition = employmentPosition;
 	}
 
@@ -25,7 +25,7 @@ public abstract class Employee {
 	}
 
 	
-	public int getEmployeeIdNumber() {
+	public double getEmployeeIdNumber() {
 		return employeeIdNumber;
 	}
 
