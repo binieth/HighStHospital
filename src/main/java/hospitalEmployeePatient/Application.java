@@ -40,9 +40,7 @@ public class Application {
 		hospitalEmployeePatient.addPatient(patient3);
 		hospitalEmployeePatient.addPatient(patient4);
 		hospitalEmployeePatient.addPatient(patient5);
-		System.out.println("Welcome to High St Hospital");
-		System.out.println("---------------------------");
-
+		
 		boolean mainMenu = true;
 
 		while (mainMenu) {
