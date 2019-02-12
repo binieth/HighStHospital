@@ -4,14 +4,16 @@
 
 package hospitalEmployeePatient;
 
-public class Doctor extends Employee implements DrawBlood, CareForPatient {
+public class Doctor extends Employee implements CareForPatient, DrawBlood {
 	
 	private String specialty;
+	private String employmentPosition;
 	
 	public Doctor(String employeeName, double employeeIdNumber, String employmentPosition) {
-		super(employeeName, employeeIdNumber, employmentPosition);
 		
-		//this.specialty = specialty;
+		super(employeeName, employeeIdNumber, employmentPosition );
+		
+		this.employmentPosition = employmentPosition;
 	}
 	
 	public String getSpecialty() {
@@ -24,8 +26,8 @@ public class Doctor extends Employee implements DrawBlood, CareForPatient {
 	
 	@Override
 	public void careForPatient(Patient patient) {
-		patient.increaseHealth(3);	
-		patient.increaseBlood(2);
+		patient.increaseHealth(2);	
+		patient.increaseBlood(1);
 	}
 
 	@Override
