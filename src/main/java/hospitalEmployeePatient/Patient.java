@@ -47,7 +47,7 @@ public class Patient {
 	}
 
 	public String toString() {
-		return patientName + " " + bloodLevel + " " + "and" + " " + healthLevel;
+		return patientName + " Blood Level is: " + "" + bloodLevel + " Health Level is: " + healthLevel;
 	}
 	
 	public void tick() {
@@ -58,7 +58,7 @@ public class Patient {
 	}
 	private void decreaseHealth(int i) {
 		
-		
+		healthLevel -= i;
 	}
 
 	public int getTick() {
@@ -69,14 +69,15 @@ public class Patient {
 
 	public void increaseHealth(int i) {
 		
-		
+		healthLevel += i;
 	}
 
 	public void increaseBlood(int i) {
+		bloodLevel += i;
 		
 	}
 
 	public void lowerBloodLevel(int i) {
-		
+		bloodLevel -= i;
 	}
 }
