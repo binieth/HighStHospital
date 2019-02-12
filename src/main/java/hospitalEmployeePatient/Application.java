@@ -130,7 +130,7 @@ public class Application {
 							nurse.careForPatient(patient);
 							System.out.println(patient.toString());
 						}
-						System.out.println("-----------------------------------");
+						s("*********************************************");
 						hospital.tick();
 						break;
 
@@ -140,7 +140,7 @@ public class Application {
 							nurse.drawBlood(patient);
 							System.out.println(patient.toString());
 						}
-						System.out.println("-----------------------------------");
+						s("**********************************************");
 						break;
 
 					case "3":
@@ -263,7 +263,7 @@ public class Application {
 			case "6":
 
 				mainMenu = false;
-				s("Thank You For Your Visit!");
+				s("Thank You Exiting Now....!");
 				break;
 
 			default:
